@@ -1,0 +1,193 @@
+/* Variables para facilitar el cambio de colores */
+:root {
+    --color-principal: #6c2d3b; /* Rojo/Vino principal */
+    --color-secundario: #c9a775; /* Dorado/Beige de los bordes */
+    --color-fondo-tarjeta: #fefefe; /* Blanco/Crema de la tarjeta */
+    --color-fondo-general: #e9e3d8; /* Fondo suave del papel */
+    --font-titulo: 'Playfair Display', serif;
+    --font-cuerpo: 'Merriweather', serif;
+}
+
+body {
+    background-color: var(--color-fondo-general);
+    /* Puedes usar una imagen de fondo aquí para las flores */
+    /* background-image: url('url-de-tu-imagen-de-flores.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--font-cuerpo);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.invitacion-card {
+    width: 100%;
+    max-width: 450px; /* Ancho máximo similar al de una invitación real */
+    padding: 40px 30px;
+    background-color: var(--color-fondo-tarjeta);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px;
+    /* Borde exterior decorativo (opcional) */
+    border: 3px solid var(--color-secundario); 
+}
+
+/* --- Títulos y Subtítulos --- */
+.titulo-principal {
+    font-family: var(--font-titulo);
+    font-size: 2.5em;
+    color: var(--color-principal);
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+/* --- Mensaje (Caja con borde doble) --- */
+.seccion-borde {
+    border: 1px solid var(--color-secundario);
+    padding: 15px 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.seccion-borde::before {
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    border: 1px solid var(--color-secundario);
+    z-index: -1;
+}
+
+.mensaje-invitado {
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* --- Ribbon (Banner de Detalles) --- */
+.ribbon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.ribbon-text {
+    background-color: var(--color-principal);
+    color: var(--color-fondo-tarjeta);
+    font-family: var(--font-titulo);
+    padding: 5px 15px;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 2;
+    /* Crear puntas de cinta/banderín */
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+    margin: 0 -10px; /* Superponer ligeramente las líneas */
+}
+
+.ribbon-line-left, .ribbon-line-right {
+    flex-grow: 1;
+    height: 3px;
+    background-color: var(--color-principal);
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Datos: Fecha y Hora --- */
+.datos-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dato-item {
+    flex: 1;
+    border: 1px solid var(--color-secundario);
+    padding: 15px 5px;
+}
+
+.label {
+    display: block;
+    font-size: 0.85em;
+    color: var(--color-principal);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.valor {
+    display: block;
+    font-family: var(--font-titulo);
+    font-size: 1.15em;
+    color: #333;
+    font-weight: 600;
+}
+
+/* --- Lugar --- */
+.lugar-container {
+    border: 1px solid var(--color-secundario);
+    padding: 15px 5px;
+    margin-bottom: 30px;
+}
+
+.lugar-container .valor {
+    margin: 5px 0;
+    font-size: 1.15em;
+    color: var(--color-principal);
+}
+
+.direccion {
+    font-size: 0.9em;
+    margin: 0;
+    color: #555;
+}
+
+/* --- RSVP y Firma --- */
+.confirmacion-texto {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.boton-rsvp {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    font-family: var(--font-cuerpo);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.boton-rsvp:hover {
+    background-color: #924458; /* Color más claro al pasar el mouse */
+}
+
+.firma {
+    margin-top: 35px;
+    line-height: 1.4;
+    font-size: 0.9em;
+}
+
+.nombre-firma {
+    font-family: var(--font-titulo);
+    font-size: 1.2em;
+    color: var(--color-principal);
+    margin-top: 5px;
+    font-weight: 700;
+}

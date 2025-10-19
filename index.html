@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Invitación para Ti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invitacion-card">
+        
+        <h1 class="titulo-principal">Una Invitación par Ti</h1>
+        <p class="subtitulo">He planeado una velada inolvidable.</p>
+
+        <div class="seccion-borde">
+            <p class="mensaje-invitado">
+                ¡Hola Sofía ❤️!
+                <br><br>
+                Quiero invitarte a una velada mágica. En este encuentro, la risa, las confidencias y los buenos momentos serán la única prioridad. Tú preciosa haces que cualquier momento sea especial, y por eso, solo será perfecto si estás a mi lado. ¡Espero verte!
+            </p>
+        </div>
+
+        <div class="ribbon-container">
+            <div class="ribbon-line-left"></div>
+            <div class="ribbon-text">Los Detalles de la Cita</div>
+            <div class="ribbon-line-right"></div>
+        </div>
+
+        <div class="datos-grid">
+            <div class="dato-item">
+                <span class="label">Fecha</span>
+                <span class="valor">Domingo, 19 de Octubre</span>
+            </div>
+            <div class="dato-item">
+                <span class="label">Hora</span>
+                <span class="valor">6:30 pm</span>
+            </div>
+        </div>
+
+        <div class="lugar-container">
+            <span class="label">Lugar</span>
+            <span class="valor">Restaurante en "Breña"</span>
+            <p class="direccion">¡Y un parquecito secreto!</p>
+        </div>
+
+        <p class="confirmacion-texto">
+            Te pido me confirmes tu asistencia.
+        </p>
+
+        <a href="#" class="boton-rsvp" onclick="mostrarConfirmacion(event)">Confirmar Asistencia</a>
+
+        <div class="firma">
+            <p>Con todo mi cariño,</p>
+            <p class="nombre-firma">Piero</p>
+        </div>
+
+    </div>
+    
+    <script>
+    function mostrarConfirmacion(event) {
+        event.preventDefault(); 
+        // CAMBIO AQUÍ: Nuevo mensaje para el cuadro de alerta
+        alert("¡Felicidades, confirmaste la asistencia, te quiero mucho! ❤️"); 
+    }
+</script>
+</body>
+</html>
